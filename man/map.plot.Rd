@@ -5,18 +5,23 @@
 The function map.plot creates a map using geographical (x,y)-coordinates. 
 This is thought for spatially dependent data of which coordinates are available. 
 Multivariate outliers are marked.}
-\usage{map.plot(coord, data, quan=1/2, alpha=0.025, symb=FALSE, ... )}
+\usage{map.plot(coord, data, quan=1/2, alpha=0.025, symb=FALSE, plotmap=TRUE, map="kola.background",which.map=c(1,2,3,4),map.col=c(5,1,3,4),map.lwd=c(2,1,2,1), ... )}
 \arguments{
 \item{coord}{(x,y)-coordinates of the data}
 \item{data}{matrix or data.frame containing the data.}
 \item{quan}{amount of observations which are used for mcd estimations. 
 has to be between 0.5 and 1, default ist 0.5}
 \item{alpha}{amount of observations used for calculating the adjusted quantile (see function arw).}
-\item{symb}{locigal for plotting special symbols (see details).}
+\item{symb}{logical for plotting special symbols (see details).}
+\item{plotmap}{logical for plotting the background map.}
+\item{map}{see plot.kola.background()}
+\item{which.map}{see plot.kola.background()}
+\item{map.col}{see plot.kola.background()}
+\item{map.lwd}{see plot.kola.background()}
 \item{...}{additional graphical parameters}
 }
 \value{
-\item{x}{original data}
+\item{outliers}{boolean vector of outliers}
 \item{md}{robust mahalanobis distances of the data}
 \item{euclidean}{(only if symb=TRUE) euclidean distances of the observations according to 
 the minimum of the data.}

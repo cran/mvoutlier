@@ -60,7 +60,6 @@ It has 46 variables, including x and y coordinates.
     \item{Y\_T}{a numeric vector}
     \item{Zn\_T}{a numeric vector}
     \item{Zr\_T}{a numeric vector}
-
   }
 }
 \source{

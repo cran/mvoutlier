@@ -7,7 +7,7 @@ scatter plot and in addition marks multivariate outliers.}
 \usage{uni.plot(x, symb=FALSE, quan=1/2, alpha=0.025, ...)}
 \arguments{
 \item{x}{matrix or data.frame containing the data.}
-\item{symb}{locigal. if FALSE, only two colors and no special symbols are used. outliers are
+\item{symb}{logical. if FALSE, only two colors and no special symbols are used. outliers are
 marked red. 
 if TRUE different symbols (cross means big value, circle means little value) according to 
 the robust mahalanobis distance based on the mcd estimator and different colors (red means 
@@ -19,6 +19,7 @@ has to be between 0.5 and 1, default ist 0.5}
 \item{...}{additional graphical parameters}
 }
 \value{
+\item{outliers}{boolean vector of outliers}
 \item{md}{robust multivariate mahalanobis distances of the data}
 \item{euclidean}{(only if symb=TRUE) multivariate euclidean distances of the observations 
 according to the minimum of the data.}

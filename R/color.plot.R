@@ -47,6 +47,9 @@ function(x, quan=1/2, alpha=0.025, ...)  {
         	}
  		lines(ttr[, 1], ttr[, 2], lty=3)
 	}
-	l <- list(md = rd, euclidean = eucl)
+	
+	o <- ( rd > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(x)[2]) ) ) )
+	l <- list(outliers = o, md = rd, euclidean = eucl)
 	l
 }
+

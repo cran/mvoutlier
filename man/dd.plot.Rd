@@ -15,6 +15,7 @@ has to be between 0.5 and 1, default ist 0.5}
 \item{...}{additional graphical parameters}
 }
 \value{
+\item{outliers}{boolean vector of outliers}
 \item{md.cla}{mahalanobis distances of the observations based on classical estimators of
 location and scatter.}
 \item{md.rob}{mahalanobis distances of the observations based on robust estimators of

@@ -23,3 +23,4 @@ function(x, y, quan=1/2, alpha=0.025, ...) {
   ret <- list(cor.cla = cor(x)[1,2], cor.rob=covr$cor[1,2])
   ret
 }
+

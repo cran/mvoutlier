@@ -15,6 +15,7 @@ has to be between 0.5 and 1, default ist 0.5}
 \item{...}{additional graphical parameters}
 }
 \value{
+\item{outliers}{boolean vector of outliers}
 \item{md}{robust mahalanobis distances of the data}
 \item{euclidean}{euclidean distances of the observations according to the minimum of the data.}
 }

@@ -46,6 +46,8 @@ function(x, quan=1/2, alpha=0.025, ...)  {
 	}
 
 	legend(xmin, ymax, c("25% quantile", "50% quantile", "75% quantile", "Adjusted quantile"), fill=c(5:2), text.col=c(5:2), cex=0.8, bty="n")
-	l <- list(md = rd)
+	o <- ( rd > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(x)[2]) ) ) )
+	l <- list(outliers = o, md = rd)
 	l
 }
+

@@ -25,3 +25,4 @@ function(x, quan=1/2, ask=TRUE, ...) {
     }
   }
 }
+

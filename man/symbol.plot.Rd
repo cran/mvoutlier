@@ -13,6 +13,7 @@ has to be between 0.5 and 1, default ist 0.5}
 \item{...}{additional graphical parameters}
 }
 \value{
+\item{outliers}{boolean vector of outliers}
 \item{md}{robust mahalanobis distances of the data}
 }
 \details{The function symbol.plot plots the (two-dimensional) data using different symbols.

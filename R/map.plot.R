@@ -1,7 +1,8 @@
 "map.plot" <-
-function(coord, data, quan=1/2, alpha=0.025, symb=FALSE, ... ) {
+function(coord, data, quan=1/2, alpha=0.025, symb=FALSE, plotmap=TRUE, map="kola.background",which.map=c(1,2,3,4),map.col=c(5,1,3,4),map.lwd=c(2,1,2,1), ... ) {
 
 	#library(rrcov)
+	data(kola.background)
 	if(ncol(coord) != 2) stop("argument coord has to be two-dimensional")  
 
 	rob <- covMcd(data, alpha=quan)
@@ -13,8 +14,9 @@ function(coord, data, quan=1/2, alpha=0.025, symb=FALSE, ... ) {
   
 	if(symb==FALSE) {
 		plot(coord, col=((sqrt(dist)<alpha[1])+2))
-		l <- list(md=sqrt(dist))
-		l
+		if(plotmap == TRUE) pkb(map=map,which.map=which.map,map.col=map.col,map.lwd=map.lwd, add=TRUE)
+		o <- ( sqrt(dist) > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(data)[2]) ) ) )
+		l <- list(outliers = o, md=sqrt(dist))
 	}
 	
   
@@ -39,7 +41,9 @@ function(coord, data, quan=1/2, alpha=0.025, symb=FALSE, ... ) {
 		        	points(coord[rd<alpha[j],],pch=lpch[j+1],cex=lcex[j+1], col=rbcol[rd<alpha[j]])
         		}
 		}
-		l <- list(md=sqrt(dist), euclidean=eucl)
-		l
+		if(plotmap == TRUE) pkb(map=map,which.map=which.map,map.col=map.col,map.lwd=map.lwd, add=TRUE)
+		o <- ( rd > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(data)[2]) ) ) )
+		l <- list(outliers = o, md=sqrt(dist), euclidean=eucl)
 	}
+	l
 }

@@ -34,6 +34,8 @@ function(x, quan=1/2, alpha=0.025, ...) {
 		       	points(distcla[rd<alpha[j]], distrob[rd<alpha[j]], pch=lpch[j+1],cex=lcex[j+1], col=rbcol[rd<alpha[j]])
         	}
         }
-        l <- list(md.cla = distcla, md.rob=distrob)
+        o <- ( rd > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(x)[2]) ) ) )
+        l <- list(outliers = o, md.cla = distcla, md.rob=distrob)
         l
 }
+

@@ -19,6 +19,9 @@ quantile appears as cyan-colored vertical line in the plot.}
 has to be between 0.5 and 1, default ist 0.5}
 \item{alpha}{Maximum thresholding proportion (optional scalar, default: alpha = 0.025)}
 }
+\value{
+\item{outliers}{boolean vector of outliers}
+}
 \details{The function aq.plot plots the ordered squared robust Mahalanobis
 distances of the observations 
 against the empirical distribution function of the $MD^2_i$. The distance calculations are 

@@ -47,5 +47,8 @@ function(x, delta=qchisq(0.975, df=ncol(x)), quan=1/2, alpha=0.025) {
       if(dist[i] >= xarw$cn) text(z[i,1], z[i,2], dimnames(as.data.frame(x))[[1]][i], col=2, cex=0.8)
       if(dist[i] < xarw$cn) text(z[i,1], z[i,2], dimnames(as.data.frame(x))[[1]][i], col=3, cex=0.8)
     }
-    
+   o <- ( sqrt(dist) > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(x)[2]) ) ) )
+   l <- list(outliers = o)
+   l 
 }
+

@@ -23,7 +23,8 @@ function(x, symb=FALSE, quan=1/2, alpha=0.025, ...) {
 			plot(runif(nrow(x), min=-1, max=1), sx[,i], main=dimnames(x)[[2]][i], xlim=c(-1.5,1.5), ylim=c(r[1], r[2]), xlab="", ylab="Scaled Data", xaxt="n", col=(sqrt(dist)<alpha[1])+2, ...)
 			par(yaxt="n")
 			abline(h=0, lty="dotted")
-			l <- list(md=sqrt(dist))
+			o <- ( sqrt(dist) > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(x)[2]) ) ) )
+			l <- list(outliers = o, md=sqrt(dist))
 		}
 	}
 	
@@ -52,8 +53,10 @@ function(x, symb=FALSE, quan=1/2, alpha=0.025, ...) {
         		}
         		abline(h=0, lty="dotted")
         	}
-        l <- list(x=x, md=sqrt(dist), euclidean=eucl)
+        o <- ( sqrt(dist) > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(x)[2]) ) ) )
+        l <- list(outliers=o, md=sqrt(dist), euclidean=eucl)
         }
         par(yaxt="s")
 	l
 }
+
