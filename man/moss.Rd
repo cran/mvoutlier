@@ -12,7 +12,7 @@ different layers were analysed, this dataset contains the moss layer.
 \format{
   A data frame with 598 observations on the following 34 variables.
   \describe{
-    \item{*ID}{a numeric vector}
+    \item{ID}{a numeric vector}
     \item{XCOO}{a numeric vector}
     \item{YCOO}{a numeric vector}
     \item{Ag}{a numeric vector}

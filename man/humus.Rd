@@ -12,7 +12,7 @@ different layers were analysed, this dataset contains the humus layer.
 \format{
   A data frame with 617 observations on the following 44 variables.
   \describe{
-    \item{*ID}{a numeric vector}
+    \item{ID}{a numeric vector}
     \item{XCOO}{a numeric vector}
     \item{YCOO}{a numeric vector}
     \item{Ag}{a numeric vector}

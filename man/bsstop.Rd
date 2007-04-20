@@ -14,8 +14,8 @@ It has 46 variables, including x and y coordinates.
 \format{
   A data frame with 768 observations on the following 46 variables.
   \describe{
-    \item{*ID}{a numeric vector}
-    \item{*CNo}{a numeric vector}
+    \item{ID}{a numeric vector}
+    \item{CNo}{a numeric vector}
     \item{XCOO}{x coordinates: a numeric vector}
     \item{YCOO}{y coordinates: a numeric vector}
     \item{SiO2\_T}{a numeric vector}

@@ -25,7 +25,7 @@ scatter}
 \author{Moritz Gschwandtner <\email{e0125439@student.tuwien.ac.at}>
 \cr Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
 \url{http://www.statistik.tuwien.ac.at/public/filz/}}
-\seealso{\code{\link[rrcov]{covMcd}}}
+\seealso{\code{\link[robustbase]{covMcd}}}
 \examples{
 # create data:
 x <- cbind(rnorm(100), rnorm(100))

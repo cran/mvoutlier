@@ -12,7 +12,7 @@ different layers were analysed, this dataset contains the C-horizon.
 \format{
   A data frame with 606 observations on the following 110 variables.
   \describe{
-    \item{*ID}{a numeric vector}
+    \item{ID}{a numeric vector}
     \item{XCOO}{a numeric vector}
     \item{YCOO}{a numeric vector}
     \item{Ag}{a numeric vector}

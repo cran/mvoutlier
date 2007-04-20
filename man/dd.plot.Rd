@@ -27,7 +27,7 @@ location and scatter (mcd).}
 \references{P. Filzmoser, R.G. Garrett, and C. Reimann (2005).
 Multivariate outlier detection in exploration geochemistry.
 \emph{Computers & Geosciences}. To appear.}
-\seealso{\code{\link{symbol.plot}}, \code{\link{color.plot}}, \code{\link{arw}}, \code{\link[rrcov]{covPlot}}}
+\seealso{\code{\link{symbol.plot}}, \code{\link{color.plot}}, \code{\link{arw}}, \code{\link[robustbase]{covPlot}}}
 \examples{
 # create data:
 x <- cbind(rnorm(100), rnorm(100))
