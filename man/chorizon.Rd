@@ -108,8 +108,8 @@ different layers were analysed, this dataset contains the C-horizon.
     \item{Zn}{a numeric vector}
     \item{Zn\_INAA}{a numeric vector}
     \item{ELEV}{a numeric vector}
-    \item{*COUN}{a numeric vector}
-    \item{*ASP}{a numeric vector}
+    \item{COUN}{a numeric vector}
+    \item{ASP}{a numeric vector}
     \item{TOPC}{a numeric vector}
     \item{LITO}{a numeric vector}
     \item{Al\_XRF}{a numeric vector}

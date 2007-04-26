@@ -1,6 +1,6 @@
 Package: mvoutlier
-Version: 1.2
-Date: 2007-04-20
+Version: 1.2.1
+Date: 2007-04-26
 Title: Multivariate outlier detection based on robust methods
 Author: Moritz Gschwandtner <e0125439@student.tuwien.ac.at> and
 	Peter Filzmoser <P.Filzmoser@tuwien.ac.at>
@@ -10,4 +10,4 @@ Description: This packages was made for outlier detection using robust estimatio
 	of location and covariance structure.
 License: GPL version 2 or newer
 URL: http://www.statistik.tuwien.ac.at/public/filz/
-Packaged: Mon Apr 23 20:31:59 2007; root
+Packaged: Thu Apr 26 20:46:36 2007; root

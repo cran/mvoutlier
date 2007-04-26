@@ -28,11 +28,11 @@ It has 46 variables, including x and y coordinates.
     \item{Na2O\_B}{a numeric vector}
     \item{K2O\_B}{a numeric vector}
     \item{P2O5\_B}{a numeric vector}
-    \item{(SO3)\_B}{a numeric vector}
-    \item{(Cl)\_B}{a numeric vector}
-    \item{(F)\_B}{a numeric vector}
+    \item{SO3\_B}{a numeric vector}
+    \item{Cl\_B}{a numeric vector}
+    \item{F\_B}{a numeric vector}
     \item{LOI\_B}{a numeric vector}
-    \item{(As)\_B}{a numeric vector}
+    \item{As\_B}{a numeric vector}
     \item{Ba\_B}{a numeric vector}
     \item{Bi\_B}{a numeric vector}
     \item{Ce\_B}{a numeric vector}
