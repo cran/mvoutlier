@@ -5,7 +5,7 @@
 Plots the Kolamap background
 }
 \usage{
-pkb(map = "kola.background", which.map = c(1, 2, 3, 4), map.col = c(5, 1, 3, 4), map.lwd = c(2, 1, 2, 1), add.plot = FALSE)
+pkb(map = "kola.background", which.map = c(1, 2, 3, 4), map.col = c(5, 1, 3, 4), map.lwd = c(2, 1, 2, 1), add.plot = FALSE, ...)
 }
 \arguments{
   \item{map}{List of coordinates. For the correct format see also help(kola.background)}
@@ -13,6 +13,7 @@ pkb(map = "kola.background", which.map = c(1, 2, 3, 4), map.col = c(5, 1, 3, 4),
   \item{map.col}{Map colors to be used}
   \item{map.lwd}{Defines linestyle of the background}
   \item{add.plot}{logical. if true background is added to an existing plot}
+  \item{\dots}{additional plot parameters, see help(par)}
 }
 \details{
 Is used by map.plot()

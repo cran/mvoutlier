@@ -10,7 +10,7 @@ all=get(map)
 xrange=c(min(all[,1],na.rm=TRUE),max(all[,1],na.rm=TRUE))
 yrange=c(min(all[,2],na.rm=TRUE),max(all[,2],na.rm=TRUE))
 # setup plot
-if (!add.plot){plot(1,1,xlim=xrange,ylim=yrange,xlab="",ylab="")}
+if (!add.plot){plot(1,1,xlim=xrange,ylim=yrange,xlab="",ylab="", ...)}
 lines(all,...)
 }
 
