@@ -1,8 +1,9 @@
+\encoding{latin1}
 \name{pkb}
 \alias{pkb}
 \title{Kola background Plot}
 \description{
-Plots the Kolamap background
+Plots the Kola background map
 }
 \usage{
 pkb(map = "kola.background", which.map = c(1, 2, 3, 4), map.col = c(5, 1, 3, 4), map.lwd = c(2, 1, 2, 1), add.plot = FALSE, ...)

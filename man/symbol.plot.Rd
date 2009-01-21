@@ -23,9 +23,9 @@ As the legend shows, these constant values correspond to the 25\%, 50\%, 75\% an
 \author{Moritz Gschwandtner <\email{e0125439@student.tuwien.ac.at}>
 \cr Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
 \url{http://www.statistik.tuwien.ac.at/public/filz/}}
-\references{P. Filzmoser, R.G. Garrett, and C. Reimann (2005).
+\references{P. Filzmoser, R.G. Garrett, and C. Reimann.
 Multivariate outlier detection in exploration geochemistry.
-\emph{Computers & Geosciences}. To appear.}
+\emph{Computers & Geosciences}, 31:579-587, 2005.}
 \seealso{\code{\link{dd.plot}}, \code{\link{color.plot}}, \code{\link{arw}}}
 \examples{
 # create data:

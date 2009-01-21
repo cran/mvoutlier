@@ -1,7 +1,7 @@
 \name{bss.background}
 \alias{bss.background}
 \docType{data}
-\title{bss.background}
+\title{Background map for the BSS project}
 \description{
 Coordinates of the BSS data background map
 }

@@ -34,15 +34,16 @@ sign2(x, makeplot = FALSE, explvar = 0.99, qcrit = 0.975, ...)
   \item{const }{ outlier  cutoff value.}
 }
 \references{
-  P. Filzmoser, R. Maronna, M. Werner (2007).
+  P. Filzmoser, R. Maronna, M. Werner.
   Outlier identification in high dimensions,
-  \emph{Computational Statistics and Data Analysis}. To appear.
+  \emph{Computational Statistics and Data Analysis}, 52, 1694--1711, 2008.
 
-  N. Locantore, J. Marron, D. Simpson, N. Tripoli, J. Zhang, and K. Cohen (1999).
+  N. Locantore, J. Marron, D. Simpson, N. Tripoli, J. Zhang, and K. Cohen.
   Robust principal components for functional data,
-  \emph{Test} 8, 1--73.
+  \emph{Test} 8, 1-73, 1999.
 }
-\author{Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>}
+\author{Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \seealso{ \code{\link{pcout}}, \code{\link{sign1}} }
 \examples{
 # geochemical data from northern Europe

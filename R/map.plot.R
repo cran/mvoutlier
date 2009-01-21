@@ -2,7 +2,8 @@
 function(coord, data, quan=1/2, alpha=0.025, symb=FALSE, plotmap=TRUE, map="kola.background",which.map=c(1,2,3,4),map.col=c(5,1,3,4),map.lwd=c(2,1,2,1), ... ) {
 
 	#library(rrcov)
-	data(kola.background)
+
+	data(list=map)
 	if(ncol(coord) != 2) stop("argument coord has to be two-dimensional")  
 
 	rob <- covMcd(data, alpha=quan)

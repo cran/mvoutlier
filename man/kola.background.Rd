@@ -1,9 +1,10 @@
+\encoding{latin1}
 \name{kola.background}
 \alias{kola.background}
 \docType{data}
-\title{kola.background}
+\title{Background map for the Kola project}
 \description{
-Coordinates of the kolamap background
+Coordinates of the Kola background map
 }
 \usage{data(kola.background)}
 \format{

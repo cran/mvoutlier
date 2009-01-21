@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{bhorizon}
 \alias{bhorizon}
 \docType{data}
@@ -12,54 +13,54 @@ different layers were analysed, this dataset contains the B-horizon.
 \format{
   A data frame with 609 observations on the following 48 variables.
   \describe{
-    \item{ID}{a numeric vector}
-    \item{XCOO}{a numeric vector}
-    \item{YCOO}{a numeric vector}
-    \item{Ag}{a numeric vector}
-    \item{Al}{a numeric vector}
-    \item{Al\_XRF}{a numeric vector}
-    \item{As}{a numeric vector}
-    \item{Ba}{a numeric vector}
-    \item{Be}{a numeric vector}
-    \item{Bi}{a numeric vector}
-    \item{Ca}{a numeric vector}
-    \item{Ca\_XRF}{a numeric vector}
-    \item{Cd}{a numeric vector}
-    \item{Co}{a numeric vector}
-    \item{Cr}{a numeric vector}
-    \item{Cu}{a numeric vector}
-    \item{EC}{a numeric vector}
-    \item{Fe}{a numeric vector}
-    \item{Fe\_XRF}{a numeric vector}
-    \item{K}{a numeric vector}
-    \item{K\_XRF}{a numeric vector}
-    \item{LOI}{a numeric vector}
-    \item{La}{a numeric vector}
-    \item{Li}{a numeric vector}
-    \item{Mg}{a numeric vector}
-    \item{Mg\_XRF}{a numeric vector}
-    \item{Mn}{a numeric vector}
-    \item{Mn\_XRF}{a numeric vector}
-    \item{Mo}{a numeric vector}
-    \item{Na}{a numeric vector}
-    \item{Na\_XRF}{a numeric vector}
-    \item{Ni}{a numeric vector}
-    \item{P}{a numeric vector}
-    \item{P\_XRF}{a numeric vector}
-    \item{Pb}{a numeric vector}
-    \item{S}{a numeric vector}
-    \item{Sc}{a numeric vector}
-    \item{Se}{a numeric vector}
-    \item{Si}{a numeric vector}
-    \item{Si\_XRF}{a numeric vector}
-    \item{Sr}{a numeric vector}
-    \item{Te}{a numeric vector}
-    \item{Th}{a numeric vector}
-    \item{Ti}{a numeric vector}
-    \item{Ti\_XRF}{a numeric vector}
-    \item{V}{a numeric vector}
-    \item{Y}{a numeric vector}
-    \item{Zn}{a numeric vector}
+    \item{\code{ID}}{a numeric vector}
+    \item{\code{XCOO}}{a numeric vector}
+    \item{\code{YCOO}}{a numeric vector}
+    \item{\code{Ag}}{a numeric vector}
+    \item{\code{Al}}{a numeric vector}
+    \item{\code{Al_XRF}}{a numeric vector}
+    \item{\code{As}}{a numeric vector}
+    \item{\code{Ba}}{a numeric vector}
+    \item{\code{Be}}{a numeric vector}
+    \item{\code{Bi}}{a numeric vector}
+    \item{\code{Ca}}{a numeric vector}
+    \item{\code{Ca_XRF}}{a numeric vector}
+    \item{\code{Cd}}{a numeric vector}
+    \item{\code{Co}}{a numeric vector}
+    \item{\code{Cr}}{a numeric vector}
+    \item{\code{Cu}}{a numeric vector}
+    \item{\code{EC}}{a numeric vector}
+    \item{\code{Fe}}{a numeric vector}
+    \item{\code{Fe_XRF}}{a numeric vector}
+    \item{\code{K}}{a numeric vector}
+    \item{\code{K_XRF}}{a numeric vector}
+    \item{\code{LOI}}{a numeric vector}
+    \item{\code{La}}{a numeric vector}
+    \item{\code{Li}}{a numeric vector}
+    \item{\code{Mg}}{a numeric vector}
+    \item{\code{Mg_XRF}}{a numeric vector}
+    \item{\code{Mn}}{a numeric vector}
+    \item{\code{Mn_XRF}}{a numeric vector}
+    \item{\code{Mo}}{a numeric vector}
+    \item{\code{Na}}{a numeric vector}
+    \item{\code{Na_XRF}}{a numeric vector}
+    \item{\code{Ni}}{a numeric vector}
+    \item{\code{P}}{a numeric vector}
+    \item{\code{P_XRF}}{a numeric vector}
+    \item{\code{Pb}}{a numeric vector}
+    \item{\code{S}}{a numeric vector}
+    \item{\code{Sc}}{a numeric vector}
+    \item{\code{Se}}{a numeric vector}
+    \item{\code{Si}}{a numeric vector}
+    \item{\code{Si_XRF}}{a numeric vector}
+    \item{\code{Sr}}{a numeric vector}
+    \item{\code{Te}}{a numeric vector}
+    \item{\code{Th}}{a numeric vector}
+    \item{\code{Ti}}{a numeric vector}
+    \item{\code{Ti_XRF}}{a numeric vector}
+    \item{\code{V}}{a numeric vector}
+    \item{\code{Y}}{a numeric vector}
+    \item{\code{Zn}}{a numeric vector}
   }
 }
 \source{

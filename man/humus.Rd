@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{humus}
 \alias{humus}
 \docType{data}
@@ -12,50 +13,50 @@ different layers were analysed, this dataset contains the humus layer.
 \format{
   A data frame with 617 observations on the following 44 variables.
   \describe{
-    \item{ID}{a numeric vector}
-    \item{XCOO}{a numeric vector}
-    \item{YCOO}{a numeric vector}
-    \item{Ag}{a numeric vector}
-    \item{Al}{a numeric vector}
-    \item{As}{a numeric vector}
-    \item{B}{a numeric vector}
-    \item{Ba}{a numeric vector}
-    \item{Be}{a numeric vector}
-    \item{Bi}{a numeric vector}
-    \item{Ca}{a numeric vector}
-    \item{Cd}{a numeric vector}
-    \item{Co}{a numeric vector}
-    \item{Cr}{a numeric vector}
-    \item{Cu}{a numeric vector}
-    \item{Fe}{a numeric vector}
-    \item{Hg}{a numeric vector}
-    \item{K}{a numeric vector}
-    \item{La}{a numeric vector}
-    \item{Mg}{a numeric vector}
-    \item{Mn}{a numeric vector}
-    \item{Mo}{a numeric vector}
-    \item{Na}{a numeric vector}
-    \item{Ni}{a numeric vector}
-    \item{P}{a numeric vector}
-    \item{Pb}{a numeric vector}
-    \item{Rb}{a numeric vector}
-    \item{S}{a numeric vector}
-    \item{Sb}{a numeric vector}
-    \item{Sc}{a numeric vector}
-    \item{Si}{a numeric vector}
-    \item{Sr}{a numeric vector}
-    \item{Th}{a numeric vector}
-    \item{Tl}{a numeric vector}
-    \item{U}{a numeric vector}
-    \item{V}{a numeric vector}
-    \item{Y}{a numeric vector}
-    \item{Zn}{a numeric vector}
-    \item{C}{a numeric vector}
-    \item{H}{a numeric vector}
-    \item{N}{a numeric vector}
-    \item{LOI}{a numeric vector}
-    \item{pH}{a numeric vector}
-    \item{Cond}{a numeric vector}
+    \item{\code{ID}}{a numeric vector}
+    \item{\code{XCOO}}{a numeric vector}
+    \item{\code{YCOO}}{a numeric vector}
+    \item{\code{Ag}}{a numeric vector}
+    \item{\code{Al}}{a numeric vector}
+    \item{\code{As}}{a numeric vector}
+    \item{\code{B}}{a numeric vector}
+    \item{\code{Ba}}{a numeric vector}
+    \item{\code{Be}}{a numeric vector}
+    \item{\code{Bi}}{a numeric vector}
+    \item{\code{Ca}}{a numeric vector}
+    \item{\code{Cd}}{a numeric vector}
+    \item{\code{Co}}{a numeric vector}
+    \item{\code{Cr}}{a numeric vector}
+    \item{\code{Cu}}{a numeric vector}
+    \item{\code{Fe}}{a numeric vector}
+    \item{\code{Hg}}{a numeric vector}
+    \item{\code{K}}{a numeric vector}
+    \item{\code{La}}{a numeric vector}
+    \item{\code{Mg}}{a numeric vector}
+    \item{\code{Mn}}{a numeric vector}
+    \item{\code{Mo}}{a numeric vector}
+    \item{\code{Na}}{a numeric vector}
+    \item{\code{Ni}}{a numeric vector}
+    \item{\code{P}}{a numeric vector}
+    \item{\code{Pb}}{a numeric vector}
+    \item{\code{Rb}}{a numeric vector}
+    \item{\code{S}}{a numeric vector}
+    \item{\code{Sb}}{a numeric vector}
+    \item{\code{Sc}}{a numeric vector}
+    \item{\code{Si}}{a numeric vector}
+    \item{\code{Sr}}{a numeric vector}
+    \item{\code{Th}}{a numeric vector}
+    \item{\code{Tl}}{a numeric vector}
+    \item{\code{U}}{a numeric vector}
+    \item{\code{V}}{a numeric vector}
+    \item{\code{Y}}{a numeric vector}
+    \item{\code{Zn}}{a numeric vector}
+    \item{\code{C}}{a numeric vector}
+    \item{\code{H}}{a numeric vector}
+    \item{\code{N}}{a numeric vector}
+    \item{\code{LOI}}{a numeric vector}
+    \item{\code{pH}}{a numeric vector}
+    \item{\code{Cond}}{a numeric vector}
   }
 }
 \source{
