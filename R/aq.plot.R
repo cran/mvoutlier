@@ -1,16 +1,15 @@
 "aq.plot" <-
-function(x, delta=qchisq(0.975, df=ncol(x)), quan=1/2, alpha=0.025) {
+function(x, delta=qchisq(0.975, df=ncol(x)), quan=1/2, alpha=0.05) {
 
-  #library(rrcov)
   if(is.vector(x) == TRUE || ncol(x) == 1) { stop("x must be at least two-dimensional") }
 
+  require(robustbase)
   covr <- covMcd(x, alpha=quan)
   dist <- mahalanobis(x, center=covr$center, cov=covr$cov)
   s <- sort(dist, index=TRUE)
 
   z <- x
   if(ncol(x) > 2) {
-        #library(stats)
 	p <- princomp(x,covmat=covr)
 	z <- p$scores[,1:2]
 	sdprop <- (p$sd[1]+p$sd[2])/sum(p$sd)
@@ -30,23 +29,19 @@ function(x, delta=qchisq(0.975, df=ncol(x)), quan=1/2, alpha=0.025) {
   lines(t, pchisq(t, df=ncol(x)), col=6)
 
   abline(v=delta, col=5)
-  text(x=delta, y=0.4, paste(100*(1-alpha),"% Quantile",sep=""), col=5, pos=4, srt=90, cex=0.8)
+  text(x=delta, y=0.4, paste(100*(pchisq(delta,df=ncol(x))),"% Quantile",sep=""), col=5, pos=2, srt=90, cex=0.8)
 
   xarw <- arw(x, covr$center, covr$cov, alpha=alpha)
   abline(v=xarw$cn, col=4)
-  text(x=xarw$cn, y=0.4, "Adjusted Quantile", col=4, pos=2, srt=90, cex=0.8)
+  text(x=xarw$cn, y=0.4, "Adjusted Quantile", col=4, pos=4, srt=90, cex=0.8)
 
-    plot(z, col=3, type="n", main=paste("Outliers based on ",100*(1-alpha),"% quantile",sep=""), xlab="", ylab="")
-    for(i in 1:nrow(x)) { 
-      if(dist[i] >= delta) text(z[i,1], z[i,2], dimnames(as.data.frame(x))[[1]][i], col=2, cex=0.8)
-      if(dist[i] < delta) text(z[i,1], z[i,2], dimnames(as.data.frame(x))[[1]][i], col=3, cex=0.8)
-    }
+    plot(z, col=3, type="n", main=paste("Outliers based on ",100*(pchisq(delta,df=ncol(x))),"% quantile",sep=""), xlab="", ylab="")
+    text(z[dist>delta, 1], z[dist>delta, 2],dimnames(as.data.frame(x)[dist>delta,])[[1]],col = 2, cex = 0.8)
+    text(z[dist<=delta, 1], z[dist<=delta, 2], dimnames(as.data.frame(x)[dist<=delta,])[[1]],col = 3, cex = 0.8)
 
     plot(z, col=3, type="n", main="Outliers based on adjusted quantile", xlab="", ylab="")
-    for(i in 1:nrow(x)) { 
-      if(dist[i] >= xarw$cn) text(z[i,1], z[i,2], dimnames(as.data.frame(x))[[1]][i], col=2, cex=0.8)
-      if(dist[i] < xarw$cn) text(z[i,1], z[i,2], dimnames(as.data.frame(x))[[1]][i], col=3, cex=0.8)
-    }
+    text(z[dist>xarw$cn, 1], z[dist>xarw$cn, 2], dimnames(as.data.frame(x)[dist>xarw$cn,])[[1]],col = 2, cex = 0.8)
+    text(z[dist<=xarw$cn, 1], z[dist<=xarw$cn, 2], dimnames(as.data.frame(x)[dist<=xarw$cn,])[[1]],col = 3, cex = 0.8)
    o <- ( sqrt(dist) > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(x)[2]) ) ) )
    l <- list(outliers = o)
    l 

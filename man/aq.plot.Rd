@@ -10,7 +10,7 @@ specified in the argument list (default is 0.975) and the so-called adjusted qua
 Three additional graphics are created (the first showing the data, the second
 showing the outliers detected by the specified quantile of the $chisq_p$ distribution and the
 third showing these detected outliers by the adjusted quantile).}
-\usage{aq.plot(x, delta=qchisq(0.975, df=ncol(x)), quan=1/2, alpha=0.025)}
+\usage{aq.plot(x, delta=qchisq(0.975, df=ncol(x)), quan=1/2, alpha=0.05)}
 \arguments{
 \item{x}{matrix or data.frame containing the data; has to be at least two-dimensional}
 \item{delta}{quantile of the chi-squared distribution with ncol(x) degrees of freedom. This
@@ -45,7 +45,8 @@ Multivariate outlier detection in exploration geochemistry.
 
 \examples{
 # create data:
-x <- cbind(rnorm(100), rnorm(100), rnorm(100))
+set.seed(134)
+x <- cbind(rnorm(80), rnorm(80), rnorm(80))
 y <- cbind(rnorm(10, 5, 1), rnorm(10, 5, 1), rnorm(10, 5, 1))
 z <- rbind(x,y)
 # execute:
