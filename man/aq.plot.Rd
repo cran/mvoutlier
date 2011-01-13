@@ -17,7 +17,7 @@ third showing these detected outliers by the adjusted quantile).}
 quantile appears as cyan-colored vertical line in the plot.}
 \item{quan}{proportion of observations which are used for mcd estimations; 
 has to be between 0.5 and 1, default ist 0.5}
-\item{alpha}{Maximum thresholding proportion (optional scalar, default: alpha = 0.025)}
+\item{alpha}{Maximum thresholding proportion (optional scalar, default: alpha = 0.05)}
 }
 \value{
 \item{outliers}{boolean vector of outliers}

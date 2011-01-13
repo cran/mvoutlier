@@ -32,18 +32,20 @@ function(x, delta=qchisq(0.975, df=ncol(x)), quan=1/2, alpha=0.05) {
   text(x=delta, y=0.4, paste(100*(pchisq(delta,df=ncol(x))),"% Quantile",sep=""), col=5, pos=2, srt=90, cex=0.8)
 
   xarw <- arw(x, covr$center, covr$cov, alpha=alpha)
-  abline(v=xarw$cn, col=4)
-  text(x=xarw$cn, y=0.4, "Adjusted Quantile", col=4, pos=4, srt=90, cex=0.8)
-
+  if (xarw$cn<Inf){
+    abline(v=xarw$cn, col=4)
+    text(x=xarw$cn, y=0.4, "Adjusted Quantile", col=4, pos=4, srt=90, cex=0.8)
+  }
     plot(z, col=3, type="n", main=paste("Outliers based on ",100*(pchisq(delta,df=ncol(x))),"% quantile",sep=""), xlab="", ylab="")
     text(z[dist>delta, 1], z[dist>delta, 2],dimnames(as.data.frame(x)[dist>delta,])[[1]],col = 2, cex = 0.8)
     text(z[dist<=delta, 1], z[dist<=delta, 2], dimnames(as.data.frame(x)[dist<=delta,])[[1]],col = 3, cex = 0.8)
 
     plot(z, col=3, type="n", main="Outliers based on adjusted quantile", xlab="", ylab="")
+  if (xarw$cn<Inf){
     text(z[dist>xarw$cn, 1], z[dist>xarw$cn, 2], dimnames(as.data.frame(x)[dist>xarw$cn,])[[1]],col = 2, cex = 0.8)
+  }
     text(z[dist<=xarw$cn, 1], z[dist<=xarw$cn, 2], dimnames(as.data.frame(x)[dist<=xarw$cn,])[[1]],col = 3, cex = 0.8)
-   o <- ( sqrt(dist) > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(x)[2]) ) ) )
-   l <- list(outliers = o)
-   l 
+   o <- ( sqrt(dist) > max(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(x)[2]) ) ) )
+   list(outliers = o)
 }
 
