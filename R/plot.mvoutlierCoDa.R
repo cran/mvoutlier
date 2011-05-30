@@ -116,11 +116,11 @@ biplot.color <- function (x, y,mvobject=x,choicePC=choice,var.axes = TRUE,
         if (bw){colv <- x$colbw} else {colv <- x$colcol}
           if (typeask==1){
             biplot.color(pca$scores[sel,choice],pca$loadings[,choice],
-		col=colv[sel], pch=x$pchvec[sel],obj.cex=x$cexvec[sel])
+		mvobject=x,col=colv[sel], pch=x$pchvec[sel],obj.cex=x$cexvec[sel])
           }
           else{
             biplot.color(pca$scores[sel,choice],pca$loadings[,choice],
-		col=colv[sel],xlabs=pchvec,obj.cex=x$cexvec[sel])
+		mvobject=x,col=colv[sel],xlabs=pchvec,obj.cex=x$cexvec[sel])
           }
     }
     else {  # symb is FALSE 
@@ -131,11 +131,11 @@ biplot.color <- function (x, y,mvobject=x,choicePC=choice,var.axes = TRUE,
         if (missing(obj.cex)){obj.cex <- 1}
           if (typeask==1){
             biplot.color(pca$scores[sel,choice],pca$loadings[,choice],
-                col=col, pch=pch,obj.cex=obj.cex)
+                mvobject=x,col=col, pch=pch,obj.cex=obj.cex)
           }
           else{
             biplot.color(pca$scores[sel,choice],pca$loadings[,choice],
-                col=col,xlabs=pchvec,obj.cex=obj.cex)
+                mvobject=x,col=col,xlabs=pchvec,obj.cex=obj.cex)
           }
     }
 }

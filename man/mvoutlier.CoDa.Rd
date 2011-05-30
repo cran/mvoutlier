@@ -5,7 +5,7 @@
 Computes the basis information for plot functions supporting the interpretation
 of multivariate outliers in case of compositional data. }
 \usage{
-mvoutlier.CoDa(x, quan = 0.75, alpha = 0.025, col.quantile = c(0, 0.05, 0.1, 0.5, 0.9, 0.95, 1), symb.pch = c(3, 3, 16, 1, 1), symb.cex = c(1.5, 1, 0.5, 1, 1.5))
+mvoutlier.CoDa(x, quan = 0.75, alpha = 0.025, col.quantile = c(0, 0.05, 0.1, 0.5, 0.9, 0.95, 1), symb.pch = c(3, 3, 16, 1, 1), symb.cex = c(1.5, 1, 0.5, 1, 1.5), adaptive = TRUE)
 }
 \arguments{
   \item{x}{data set (matrix or data frame) containing the raw untransformed compositional data}
@@ -14,6 +14,7 @@ mvoutlier.CoDa(x, quan = 0.75, alpha = 0.025, col.quantile = c(0, 0.05, 0.1, 0.5
   \item{col.quantile}{quantiles of an average concentration defining the colors}
   \item{symb.pch}{plotting character for symbols}
   \item{symb.cex}{plotting size for symbols }
+  \item{adaptive}{if TRUE then the adaptive method for the outlier threshold is used }
 }
 \details{
 In a first step, the raw compositional data set in transformed by the isometric logratio

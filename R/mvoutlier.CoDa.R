@@ -1,6 +1,6 @@
 mvoutlier.CoDa <-
 function (x, quan = 0.75, alpha = 0.025, col.quantile=c(0,0.05,0.10,0.5,0.90,0.95,1),
-        symb.pch=c(3,3,16,1,1),symb.cex=c(1.5,1,0.5,1,1.5))
+        symb.pch=c(3,3,16,1,1),symb.cex=c(1.5,1,0.5,1,1.5),adaptive=TRUE)
 {                                                          
 # multivariate outlier detection for Compositional Data
     if (!is.matrix(x) && !is.data.frame(x))                
@@ -22,14 +22,23 @@ function (x, quan = 0.75, alpha = 0.025, col.quantile=c(0,0.05,0.10,0.5,0.90,0.9
 
     # robust covariance estimation
     rob <- covMcd(Z, alpha = quan)                                 
-    Zarw <- arw(Z, rob$center, rob$cov, alpha = alpha)             
-    if (Zarw$cn != Inf) {                                          
-        alpha1 <- sqrt(c(Zarw$cn, qchisq(c(0.75, 0.5, 0.25), ncol(Z))))
-    }                                                                 
-    else {                                                            
-        alpha1 <- sqrt(qchisq(c(0.975, 0.75, 0.5, 0.25), ncol(Z)))     
-    }                                                                 
-    rd <- sqrt(mahalanobis(Z, center = Zarw$m, cov = Zarw$c))
+    if (adaptive) { # adaptive threshold estimation is used
+      Zarw <- arw(Z, rob$center, rob$cov, alpha = alpha)             
+      if (Zarw$cn != Inf) {                                          
+          alpha1 <- sqrt(c(Zarw$cn, qchisq(c(0.75, 0.5, 0.25), ncol(Z))))
+      }                                                                 
+      else {                                                            
+          alpha1 <- sqrt(qchisq(c(0.975, 0.75, 0.5, 0.25), ncol(Z)))     
+      }                                                                 
+      rd2 <- mahalanobis(Z, center = Zarw$m, cov = Zarw$c)
+    }
+    else { # do not use adaptive threshold estimation
+      cutoff <- qchisq(1-alpha, ncol(Z))
+      rd2 <- mahalanobis(Z, center = rob$center, cov = rob$cov)
+      Zarw <- list(m=rob$center,c=rob$cov,cn=cutoff,w=as.numeric(rd2<cutoff))
+      alpha1 <- sqrt(qchisq(c(0.975, 0.75, 0.5, 0.25), ncol(Z)))     
+    }
+    rd <- sqrt(rd2)
 
     # robust PCA for biplot
     covobj <- list(center=Zarw$m,cov=Zarw$c,n.obs=length(rd),mah=rd)
