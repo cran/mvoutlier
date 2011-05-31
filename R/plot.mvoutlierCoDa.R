@@ -177,7 +177,8 @@ else if (which[1]=="map"){
 # Univariate Scatter Plot #############################
 else if (which[1]=="uni"){
     Zj <- x$ilrvariables[sel,]
-    old.par <- par(mfrow = c(1, ncol(Zj)), mai = c(0.6, 0, 0.6, 0), oma = c(0, 3, 0, 3))
+    ###old.par <- par(mfrow = c(1, ncol(Zj)), mai = c(0.6, 0, 0.6, 0), oma = c(0, 3, 0, 3))
+    old.par <- par(mfrow = c(1, ncol(Zj)), mai = c(0.6, 0.15, 0.6, 0.15), oma = c(0, 3, 0, 3))
     if (symb) {
         if (bw){colv <- x$colbw} else {colv <- x$colcol}
           if (typeask==1){
@@ -186,7 +187,7 @@ else if (which[1]=="uni"){
                 main = paste("ilr(",dimnames(Zj)[[2]][i],")",sep=""), xlim = c(-1.5, 1.5),
 		xlab = "",ylab="ilr-variables",xaxt = "n", col = colv[sel],
                 pch=x$pchvec[sel], cex=x$cexvec[sel],...) 
-              par(yaxt = "n")
+              ###par(yaxt = "n")
             }
           } 
           else { # typeask is 2
@@ -196,7 +197,7 @@ else if (which[1]=="uni"){
                 xlab = "",ylab="ilr-variables",xaxt = "n", col = colv[sel],type="n",...)
               text(runif(nrow(Zj), min = -1, max = 1), Zj[,i], labels=pchvec,
                 col = colv[sel],...)
-              par(yaxt = "n")
+              ###par(yaxt = "n")
             }
           }
     }
@@ -212,7 +213,7 @@ else if (which[1]=="uni"){
                 main = paste("ilr(",dimnames(Zj)[[2]][i],")",sep=""), xlim = c(-1.5, 1.5),
                 xlab = "",ylab="ilr-variables",xaxt = "n", col = col,
                 pch=pch, cex=obj.cex,...)
-              par(yaxt = "n")
+              ###par(yaxt = "n")
             }
           }
           else { # typeask is 2
@@ -222,7 +223,7 @@ else if (which[1]=="uni"){
                 xlab = "",ylab="ilr-variables",xaxt = "n", col = col,type="n",...)
               text(runif(nrow(Zj), min = -1, max = 1), Zj[,i], labels=pchvec,
                 col = col,cex=obj.cex,...)
-              par(yaxt = "n")
+              ###par(yaxt = "n")
             }
           }
     }
