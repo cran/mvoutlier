@@ -1,0 +1,16 @@
+#import(compositions)
+#import(robCompositions)
+#import(rrcov)
+#import(robustbase)
+
+
+## Imports:
+#importFrom(compositions,ilrBase)
+#importFrom(robCompositions,ilr)
+importFrom(robustbase,covMcd)
+
+## Exported functions:
+export(aq.plot,arw,chisq.plot,color.plot,cor.plot,dd.plot,map.plot,mvoutlier.CoDa,
+       pbb,pcout,pkb,plot.mvoutlierCoDa,sign1,sign2,symbol.plot,uni.plot)
+
+
