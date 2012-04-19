@@ -72,6 +72,6 @@ Trondheim, Norway, 1998.
 \examples{
 data(humus)
 # classical versus robust correlation:
-cor.plot(log(humus[,"Al"]), log(humus[,"Na"]))
+corr.plot(log(humus[,"Al"]), log(humus[,"Na"]))
 }
 \keyword{datasets}

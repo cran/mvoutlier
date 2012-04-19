@@ -15,7 +15,7 @@ function(coord, data, quan=1/2, alpha=0.025, symb=FALSE, plotmap=TRUE, map="kola
   
 	if(symb==FALSE) {
 		plot(coord, col=((sqrt(dist)<alpha[1])+2))
-		if(plotmap == TRUE) pkb(map=map,which.map=which.map,map.col=map.col,map.lwd=map.lwd, add=TRUE)
+		if(plotmap == TRUE) pkb(map=map,which.map=which.map,map.col=map.col,map.lwd=map.lwd, add.plot=TRUE)
 		o <- ( sqrt(dist) > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(data)[2]) ) ) )
 		l <- list(outliers = o, md=sqrt(dist))
 	}
@@ -42,7 +42,7 @@ function(coord, data, quan=1/2, alpha=0.025, symb=FALSE, plotmap=TRUE, map="kola
 		        	points(coord[rd<alpha[j],],pch=lpch[j+1],cex=lcex[j+1], col=rbcol[rd<alpha[j]])
         		}
 		}
-		if(plotmap == TRUE) pkb(map=map,which.map=which.map,map.col=map.col,map.lwd=map.lwd, add=TRUE)
+		if(plotmap == TRUE) pkb(map=map,which.map=which.map,map.col=map.col,map.lwd=map.lwd, add.plot=TRUE)
 		o <- ( rd > min(sqrt(xarw$cn), sqrt(qchisq(0.975, dim(data)[2]) ) ) )
 		l <- list(outliers = o, md=sqrt(dist), euclidean=eucl)
 	}

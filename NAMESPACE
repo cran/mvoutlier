@@ -10,7 +10,8 @@
 importFrom(robustbase,covMcd)
 
 ## Exported functions:
-export(aq.plot,arw,chisq.plot,color.plot,cor.plot,dd.plot,map.plot,mvoutlier.CoDa,
-       pbb,pcout,pkb,plot.mvoutlierCoDa,sign1,sign2,symbol.plot,uni.plot)
+export(aq.plot,arw,chisq.plot,color.plot,corr.plot,dd.plot,map.plot,mvoutlier.CoDa,
+       pbb,pcout,pkb,plot.mvoutlierCoDa,sign1,sign2,symbol.plot,uni.plot,locoutNeighbor,
+       locoutPercent,locoutSort)
 
 

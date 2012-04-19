@@ -75,6 +75,6 @@ Schweizerbart'sche Verlagsbuchhandlung, Stuttgart, 2003.
 \examples{
 data(bsstop)
 # classical versus robust correlation
-cor.plot(log(bsstop[, "Al2O3_T"]), log(bsstop[, "Na2O_T"]))
+corr.plot(log(bsstop[, "Al2O3_T"]), log(bsstop[, "Na2O_T"]))
 }
 \keyword{datasets}

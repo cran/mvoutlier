@@ -1,11 +1,11 @@
-\name{cor.plot}
-\alias{cor.plot}
+\name{corr.plot}
+\alias{corr.plot}
 \title{Correlation Plot: robust versus classical bivariate correlation}
 \description{
-The function cor.plot plots the (two-dimensional) data and adds two correlation ellipsoids, 
+The function corr.plot plots the (two-dimensional) data and adds two correlation ellipsoids, 
 based on classical and robust estimation of location and scatter. Robust estimation 
 can be thought of as estimating the mean and covariance of the 'good' part of the data.}
-\usage{cor.plot(x, y, quan=1/2, alpha=0.025, ...)}
+\usage{corr.plot(x, y, quan=1/2, alpha=0.025, ...)}
 \arguments{
 \item{x}{vector to be plotted against y and of which the correlation with y is calculated.}
 \item{y}{vector to be plotted against x and of which the correlation with x is calculated.}
@@ -32,6 +32,6 @@ x <- cbind(rnorm(100), rnorm(100))
 y <- cbind(rnorm(10, 3, 1), rnorm(10, 3, 1))
 z <- rbind(x,y)
 # execute:
-cor.plot(z[,1], z[,2])
+corr.plot(z[,1], z[,2])
 }
 \keyword{dplot}

@@ -138,6 +138,6 @@ Trondheim, Norway, 1998.
 \examples{
 data(chorizon)
 # classical versus robust correlation
-cor.plot(log(chorizon[,"Al"]), log(chorizon[,"Na"]))
+corr.plot(log(chorizon[,"Al"]), log(chorizon[,"Na"]))
 }
 \keyword{datasets}

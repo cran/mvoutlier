@@ -62,6 +62,6 @@ Trondheim, Norway, 1998.
 \examples{
 data(moss)
 # classical versus robust correlation:
-cor.plot(log(moss[,"Al"]), log(moss[,"Na"]))
+corr.plot(log(moss[,"Al"]), log(moss[,"Na"]))
 }
 \keyword{datasets}

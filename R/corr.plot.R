@@ -1,4 +1,4 @@
-"cor.plot" <-
+"corr.plot" <-
 function(x, y, quan=1/2, alpha=0.025, ...) {
 
   #library(rrcov)  
