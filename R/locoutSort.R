@@ -64,9 +64,9 @@ else {
     names(d1) <- 1:n
     d2 <- sort(d1,index.return=TRUE)
     ind <- which(d2$x[2:(length(X)-1)]==d2$x[3:length(d2$x)])
-    p<-length(ind)
-    if(p!=0)
-     {for (j in 1:p)
+    pl<-length(ind)
+    if(pl!=0)
+     {for (j in 1:pl)
        d2$ix[which(d2$x==d2$x[ind[j]+1])]=d2$ix[sample(which(d2$x==d2$x[ind[j]+1]))]
      }
     nnlist[[i]] <- d2$ix[2:(k+1)]
