@@ -5,7 +5,9 @@
 Plots the computed information by \code{mvoutlier.CoDa} for supporting the interpretation
 of multivariate outliers in case of compositional data.}
 \usage{
-\method{plot}{mvoutlierCoDa}(x, ..., which = c("biplot", "map", "uni", "parallel"), choice = 1:2, coord = NULL, map = NULL, onlyout = TRUE, bw = FALSE, symb = TRUE, symbtxt = FALSE, col = NULL, pch = NULL, obj.cex = NULL, transp = 1)
+\method{plot}{mvoutlierCoDa}(x, ..., which = c("biplot", "map", "uni", "parallel"), 
+   choice = 1:2, coord = NULL, map = NULL, onlyout = TRUE, bw = FALSE, symb = TRUE, 
+   symbtxt = FALSE, col = NULL, pch = NULL, obj.cex = NULL, transp = 1)
 }
 \arguments{
   \item{x}{resulting object from function \code{mvoutlier.CoDa} }

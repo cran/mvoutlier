@@ -5,7 +5,9 @@
 The function map.plot creates a map using geographical (x,y)-coordinates. 
 This is thought for spatially dependent data of which coordinates are available. 
 Multivariate outliers are marked.}
-\usage{map.plot(coord, data, quan=1/2, alpha=0.025, symb=FALSE, plotmap=TRUE, map="kola.background",which.map=c(1,2,3,4),map.col=c(5,1,3,4),map.lwd=c(2,1,2,1), ... )}
+\usage{map.plot(coord, data, quan=1/2, alpha=0.025, symb=FALSE, plotmap=TRUE, 
+    map="kola.background",which.map=c(1,2,3,4),map.col=c(5,1,3,4),
+    map.lwd=c(2,1,2,1), ... )}
 \arguments{
 \item{coord}{(x,y)-coordinates of the data}
 \item{data}{matrix or data.frame containing the data.}

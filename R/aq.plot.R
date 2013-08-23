@@ -3,7 +3,6 @@ function(x, delta=qchisq(0.975, df=ncol(x)), quan=1/2, alpha=0.05) {
 
   if(is.vector(x) == TRUE || ncol(x) == 1) { stop("x must be at least two-dimensional") }
 
-  require(robustbase)
   covr <- covMcd(x, alpha=quan)
   dist <- mahalanobis(x, center=covr$center, cov=covr$cov)
   s <- sort(dist, index=TRUE)

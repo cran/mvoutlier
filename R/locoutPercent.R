@@ -5,7 +5,6 @@ function(dat,X,Y,dist=NULL,k=10,chisqqu=0.975,sortup=10,sortlow=90,nlinesup=10,n
 
 n=nrow(dat)
 p=ncol(dat)
-require(robustbase) # for robust Mahalanobis distance
 covr <- covMcd(dat)
 cinv <- solve(covr$cov) # inverse of the robust covariance matrix
 MDglobal <- sqrt(mahalanobis(dat, covr$center, cinv, inverted=TRUE))

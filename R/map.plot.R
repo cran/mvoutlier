@@ -3,7 +3,7 @@ function(coord, data, quan=1/2, alpha=0.025, symb=FALSE, plotmap=TRUE, map="kola
 
 	#library(rrcov)
 
-	data(list=map)
+	# data(list=map) # is now in DESCRIPTION with LazyData: TRUE
 	if(ncol(coord) != 2) stop("argument coord has to be two-dimensional")  
 
 	rob <- covMcd(data, alpha=quan)

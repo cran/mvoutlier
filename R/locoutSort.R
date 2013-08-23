@@ -24,7 +24,6 @@ function(dat,X,Y,dist=NULL,k,propneighb=0.1,chisqqu=0.975,
 
 n <- nrow(dat)
 p <- ncol(dat)
-require(robustbase) # for robust Mahalanobis distance
 covr <- covMcd(dat)
 cinv <- solve(covr$cov) # inverse of the robust covariance matrix
 MDglobal <- sqrt(mahalanobis(dat, covr$center, cinv, inverted=TRUE))
@@ -121,7 +120,6 @@ list(resdist=resdist,idx1=idx1,idx0=idx0,mduse=MDpairN,mdusual=MDglobal,mdusual0
 }
 #################################################################################################
 
-require(sgeostat)
 xy <- cbind(X,Y)
 
 par(mfrow=c(1,2))

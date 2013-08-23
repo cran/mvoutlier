@@ -60,8 +60,7 @@ title("Outlier detection based on signout")
 legend("topleft",legend=c("potential outliers","regular observations"),pch=16,col=c(2,3))
 
 # compare with outlier detection based on MCD:
-require(robustbase)
-x.mcd=covMcd(x)
+x.mcd <- robustbase::covMcd(x)
 pbb(asp=1)
 points(bsstop$XCOO,bsstop$YCOO,pch=16,col=x.mcd$mcd.wt+2)
 title("Outlier detection based on MCD")

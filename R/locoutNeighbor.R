@@ -8,7 +8,6 @@ if (is.null(ylab)){
 }
 n <- nrow(dat)
 p <- ncol(dat)
-require(robustbase) # for robust Mahalanobis distance
 covr <- covMcd(dat)
 cinv <- solve(covr$cov) # inverse of the robust covariance matrix
 MDglobal <- sqrt(mahalanobis(dat, covr$center, cinv, inverted=TRUE))

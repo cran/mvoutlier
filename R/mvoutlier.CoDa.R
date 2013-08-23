@@ -9,14 +9,14 @@ function (x, quan = 0.75, alpha = 0.025, col.quantile=c(0,0.05,0.10,0.5,0.90,0.9
         stop("x must have at least 3 compositional parts")         
 
     # ilr transformation
-    Z <- -robCompositions::isomLR(x)
-    V <- compositions::ilrBase(x=x,z=Z)
+    Z <- -isomLR(x)
+    V <- ilrBase(x=x,z=Z)
     V <- V[ncol(x):1,(ncol(x)-1):1]
 
     # "univariate" ilr transformations:
     Zj <- matrix(NA,nrow=nrow(x),ncol=ncol(x))
     for (j in 1:ncol(x)){
-      Zj[,j] <- -robCompositions::isomLR(cbind(x[,j],x[,-j]))[,1]
+      Zj[,j] <- -isomLR(cbind(x[,j],x[,-j]))[,1]
     }
     dimnames(Zj)[[2]] <- names(x)
 

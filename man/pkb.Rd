@@ -6,7 +6,8 @@
 Plots the Kola background map
 }
 \usage{
-pkb(map = "kola.background", which.map = c(1, 2, 3, 4), map.col = c(5, 1, 3, 4), map.lwd = c(2, 1, 2, 1), add.plot = FALSE, ...)
+pkb(map = "kola.background", which.map = c(1, 2, 3, 4), map.col = c(5, 1, 3, 4), 
+    map.lwd = c(2, 1, 2, 1), add.plot = FALSE, ...)
 }
 \arguments{
   \item{map}{List of coordinates. For the correct format see also help(kola.background)}

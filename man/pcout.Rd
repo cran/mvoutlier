@@ -7,7 +7,8 @@
   Werner (CSDA, 2007).
 }
 \usage{
-pcout(x, makeplot = FALSE, explvar = 0.99, crit.M1 = 1/3, crit.c1 = 2.5, crit.M2 = 1/4, crit.c2 = 0.99, cs = 0.25, outbound = 0.25, ...)
+pcout(x, makeplot = FALSE, explvar = 0.99, crit.M1 = 1/3, crit.c1 = 2.5, 
+   crit.M2 = 1/4, crit.c2 = 0.99, cs = 0.25, outbound = 0.25, ...)
 }
 \arguments{
   \item{x}{ a numeric matrix or data frame which provides the data for
@@ -76,8 +77,7 @@ title("Outlier detection based on pcout")
 legend("topleft",legend=c("potential outliers","regular observations"),pch=16,col=c(2,3))
 
 # compare with outlier detection based on MCD:
-require(robustbase)
-x.mcd=covMcd(x)
+x.mcd <- robustbase::covMcd(x)
 pbb(asp=1)
 points(bsstop$XCOO,bsstop$YCOO,pch=16,col=x.mcd$mcd.wt+2)
 title("Outlier detection based on MCD")

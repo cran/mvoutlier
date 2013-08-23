@@ -8,7 +8,8 @@ local multivariate outliers. The plot is split into regular (left) and global
 these points are shown by spatial coordinates.
 }
 \usage{
-locoutSort(dat, X, Y, distc = NULL, k = 10, propneighb = 0.1, chisqqu = 0.975, sel = NULL, ...)
+locoutSort(dat, X, Y, distc = NULL, k = 10, propneighb = 0.1, chisqqu = 0.975, 
+    sel = NULL, ...)
 }
 \arguments{
   \item{dat}{multivariate data set (without coordinates)}

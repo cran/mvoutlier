@@ -5,7 +5,10 @@
 Computes the basis information for plot functions supporting the interpretation
 of multivariate outliers in case of compositional data. }
 \usage{
-mvoutlier.CoDa(x, quan = 0.75, alpha = 0.025, col.quantile = c(0, 0.05, 0.1, 0.5, 0.9, 0.95, 1), symb.pch = c(3, 3, 16, 1, 1), symb.cex = c(1.5, 1, 0.5, 1, 1.5), adaptive = TRUE)
+mvoutlier.CoDa(x, quan = 0.75, alpha = 0.025, 
+   col.quantile = c(0, 0.05, 0.1, 0.5, 0.9, 0.95, 1), 
+   symb.pch = c(3, 3, 16, 1, 1), symb.cex = c(1.5, 1, 0.5, 1, 1.5), 
+   adaptive = TRUE)
 }
 \arguments{
   \item{x}{data set (matrix or data frame) containing the raw untransformed compositional data}

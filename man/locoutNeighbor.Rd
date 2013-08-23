@@ -8,8 +8,8 @@ varying, but the fraction of neighbors is fixed.
 }
 \usage{
 locoutNeighbor(dat, X, Y, propneighb = 0.1, variant = c("dist", "knn"), usemax = 1/3, 
-   npoints = 50, chisqqu = 0.975, indices = NULL, xlab = NULL, ylab = NULL, colall = gray(0.7), 
-   colsel = 1, ...)
+   npoints = 50, chisqqu = 0.975, indices = NULL, xlab = NULL, ylab = NULL, 
+   colall = gray(0.7), colsel = 1, ...)
 }
 \arguments{
   \item{dat}{multivariate data set (without coordinates)}
