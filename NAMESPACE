@@ -3,7 +3,7 @@ import(sgeostat)
 
 
 ## Imports:
-importFrom("compositions",ilrBase)
+#importFrom("compositions",ilrBase)
 importFrom("robCompositions",isomLR)
 importFrom("robustbase",covMcd)
 #importFrom("sgeostat",in.polygon)

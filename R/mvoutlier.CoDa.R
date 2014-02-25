@@ -10,8 +10,27 @@ function (x, quan = 0.75, alpha = 0.025, col.quantile=c(0,0.05,0.10,0.5,0.90,0.9
 
     # ilr transformation
     Z <- -isomLR(x)
-    V <- ilrBase(x=x,z=Z)
-    V <- V[ncol(x):1,(ncol(x)-1):1]
+#    V <- ilrBase(x=x,z=Z)
+#   V <- V[ncol(x):1,(ncol(x)-1):1]
+
+Vmat <- function(D){
+  V <- matrix(0, nrow = D-1, ncol = D)
+  for (i in 1:(D-1)) {
+        V[i, 1:(D-i)] <- 0
+        V[i,(D-i+1):D] <- -(1/(i))
+        V[i,D-i] <- 1
+        V[i,] <- V[i,] * sqrt(i/(i + 1))
+  }
+  V<-t(V)
+  Y=matrix(0,ncol=D-1,nrow=D)
+  for(i  in 1:dim(V)[2]){
+        Y[,D-i]= V[,i]
+        }
+  V=Y
+  return(V)
+}
+
+   V <- Vmat(ncol(x))
 
     # "univariate" ilr transformations:
     Zj <- matrix(NA,nrow=nrow(x),ncol=ncol(x))
