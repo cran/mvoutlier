@@ -1,7 +1,7 @@
-8ec25c4c3ee125e533e60900dc7e798c *DESCRIPTION
+de2075f43108dcd474c8187423cf725e *DESCRIPTION
 c423953bdf248f11880cf0adb26fb412 *NAMESPACE
 5be2e15d57148f5f993ad22cae6762ee *R/aq.plot.R
-202fa27cc21ee4fbf6af106d99f65be0 *R/arw.R
+14ace74349904ed5c4acaec8a6353e63 *R/arw.R
 1868fd4be19fe96de8126d297e44c265 *R/chisq.plot.R
 36f8dda36fb996f2f7fabaa2d5624f53 *R/color.plot.R
 eef5e536ba3d173d28ae5ad7d4c96956 *R/corr.plot.R
@@ -36,8 +36,8 @@ b0fd7f304512d0382f327dd90fa8d33b *man/Y.Rd
 ac983989424ad4b7b7b177465a5923c2 *man/arw.Rd
 689cb79536cbaac27615378bad1be1bb *man/bhorizon.Rd
 ac975a331bfa8c0edf792e4b99f60a54 *man/bss.background.Rd
-f28c4c85a1e52dfffbef405d43eaec6f *man/bssbot.Rd
-ced9e2525d79a21e0d06ce9d04b07020 *man/bsstop.Rd
+65e62a7ef9b5d0c7d60568e6c73ea8d9 *man/bssbot.Rd
+d5a21f384a781a8ef4095be420a38e31 *man/bsstop.Rd
 047df590d12786218fd25b01b08f20c0 *man/chisq.plot.Rd
 a7d370a3952e323edda6fd99476ff1c7 *man/chorizon.Rd
 bef64b9276ef3bf711c4f374cb09a561 *man/color.plot.Rd

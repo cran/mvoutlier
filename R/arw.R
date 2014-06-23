@@ -42,7 +42,8 @@ if(sum(w)==0) {
 else {
   m <- apply(x[w,],2,mean)
   c1 <- as.matrix(x-rep(1,n)%*%t(m))
-  c <- (t(c1)%*%diag(w)%*%c1)/sum(w)
+  # c <- (t(c1)%*%diag(w)%*%c1)/sum(w)
+  c <- (t(c1*w) %*% c1)/sum(w)
 }
 list(m=m,c=c,cn=cn,w=w)
 }
