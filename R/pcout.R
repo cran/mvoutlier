@@ -62,7 +62,7 @@ w2[x.dist2>const2] <- 0
 #################################################################
 # Combine PHASE1 and PHASE 2: compute final weights:
 wfinal <- (w1+cs)*(w2+cs)/((1+cs)^2)
-wfinal01 <- round(wfinal+outbound)
+wfinal01 <- round(wfinal+0.5-outbound)
 
 #################################################################
 # Generate plot:
