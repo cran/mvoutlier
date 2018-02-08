@@ -38,7 +38,7 @@ principal components.
 }
 \author{Moritz Gschwandtner <\email{e0125439@student.tuwien.ac.at}>
 \cr Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \references{P. Filzmoser, R.G. Garrett, and C. Reimann.
 Multivariate outlier detection in exploration geochemistry.
 \emph{Computers & Geosciences}, 31:579-587, 2005.}

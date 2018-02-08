@@ -42,7 +42,7 @@ P. Filzmoser, A. Ruiz-Gazen, and C. Thomas-Agnan: Identification of local multiv
 outliers. Submitted for publication, 2012.
 }
 \author{Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \seealso{ \code{\link{locoutPercent}}, \code{\link{locoutNeighbor}} }
 \examples{
 # use data from illustrative example in paper:

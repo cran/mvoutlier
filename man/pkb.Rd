@@ -21,7 +21,7 @@ pkb(map = "kola.background", which.map = c(1, 2, 3, 4), map.col = c(5, 1, 3, 4),
 Is used by map.plot()
 }
 \author{Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \references{
 Reimann C, Äyräs M, Chekushin V, Bogatyrev I, Boyd R, Caritat P de, Dutter R,
 Finne TE, Halleraker JH, Jæger Ø, Kashulina G, Lehto O, Niskavaara H, Pavlov V,

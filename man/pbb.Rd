@@ -26,7 +26,7 @@ Geologisches Jahrbuch, Sonderhefte, Reihe D, Heft SD 5,
 Schweizerbart'sche Verlagsbuchhandlung, Stuttgart, 2003.
 }
 \author{Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \seealso{See also \code{\link{pkb}}}
 \examples{
 data(bss.background)

@@ -8,7 +8,8 @@ function (x, quan = 0.75, alpha = 0.025, col.quantile = c(0,
     if (ncol(x) < 3) 
         stop("x must have at least 3 compositional parts")
     Z <- pivotCoord(x)
-    V <- (-orthbasis(ncol(x))$V)
+    #V <- (-orthbasis(ncol(x))$V)
+    V <- (orthbasis(ncol(x))$V)
     Zj <- matrix(NA, nrow = nrow(x), ncol = ncol(x))
     for (j in 1:ncol(x)) {
         Zj[, j] <- pivotCoord(cbind(x[, j], x[, -j]))[, 1]
@@ -70,4 +71,3 @@ function (x, quan = 0.75, alpha = 0.025, col.quantile = c(0,
     class(mvoutlierCoDa) <- "mvoutlierCoDa"
     return(mvoutlierCoDa)
 }
-

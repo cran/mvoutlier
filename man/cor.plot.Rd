@@ -24,7 +24,7 @@ scatter}
 }
 \author{Moritz Gschwandtner <\email{e0125439@student.tuwien.ac.at}>
 \cr Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \seealso{\code{\link[robustbase]{covMcd}}}
 \examples{
 # create data:

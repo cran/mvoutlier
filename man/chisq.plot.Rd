@@ -27,7 +27,7 @@ line appears.
 }
 \author{Moritz Gschwandtner <\email{e0125439@student.tuwien.ac.at}>
 \cr Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \references{R.G. Garrett (1989).
 The chi-square plot: a tools for multivariate outlier recognition.
 \emph{Journal of Geochemical Exploration}, 32 (1/3), 319-341.}

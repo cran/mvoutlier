@@ -41,7 +41,7 @@ sign1(x, makeplot = FALSE, qcrit = 0.975, ...)
   \emph{Test} 8, 1--73.
 }
 \author{Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \seealso{ \code{\link{pcout}}, \code{\link{sign2}} }
 \examples{
 # geochemical data from northern Europe
