@@ -9,8 +9,8 @@ import(sgeostat)
 
 ## Imports:
 #importFrom("compositions",ilrBase)
-importFrom(robCompositions,pivotCoord)
-importFrom(robCompositions,orthbasis)
+#importFrom(robCompositions,pivotCoord)
+#importFrom(robCompositions,orthbasis)
 importFrom(robustbase,covMcd)
 #importFrom("sgeostat",in.polygon)
 #useDynLib("sgeostat",myRoutine_sym=inplg)

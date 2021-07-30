@@ -3,6 +3,78 @@ function (x, quan = 0.75, alpha = 0.025, col.quantile = c(0,
     0.05, 0.1, 0.5, 0.9, 0.95, 1), symb.pch = c(3, 3, 16, 1, 
     1), symb.cex = c(1.5, 1, 0.5, 1, 1.5), adaptive = TRUE) 
 {
+
+
+orthbasis <- function (D) 
+{
+    ilrBase <- NULL
+    b <- function(D) {
+        m <- matrix(1, nrow = D, ncol = D - 1)
+        for (i in 1:(ncol(m) - 1)) {
+            m[1:i, i + 1] <- 0
+            m[i, i] <- -1
+        }
+        m[i + 1, i + 1] <- -1
+        m
+    }
+    transform <- function(basis) {
+        basis <- as.matrix(basis)
+        nc <- ncol(basis)
+        D <- nrow(basis)
+        isPos <- basis > 0
+        isNeg <- basis < 0
+        nPos <- matrix(1, D, D) %*% isPos
+        nNeg <- matrix(1, D, D) %*% isNeg
+        basis <- (isPos * nNeg - isNeg * nPos)
+        numb <- sapply(1:nc, function(i) {
+            1/sqrt(basis[, i] %*% basis[, i])
+        })
+        numb <- matrix(numb, ncol = nc, nrow = D, byrow = TRUE)
+        basis <- basis * numb
+        return(basis)
+    }
+    basis <- b(D)
+    basis <- basis * (-1)
+    V <- transform(basis)
+    ll <- list(V = V, basisv = basis)
+    return(ll)
+}
+
+gm <- function (x)
+{
+    exp(mean(log(unclass(x)[is.finite(x) & x > 0])))
+}
+
+pivotCoord <- function (x, pivotvar = 1, base = exp(1))
+{
+    if (dim(x)[2] < 2)
+        stop("data must be of dimension greater equal 2")
+    if (any(x < 0))
+        stop("negative values not allowed")
+    norm <- "sqrt((D-i)/(D-i+1))"
+    x.ilr <- matrix(NA, nrow = nrow(x), ncol = ncol(x) - 1)
+    D <- ncol(x)
+    w <- which(pivotvar != 1:D)
+    x <- x[, c(pivotvar, w)]
+    for (i in 1:ncol(x.ilr)) {
+       x.ilr[, i] <- eval(parse(text = norm)) * log(apply(as.matrix(x[,
+                (i + 1):D]), 1, gm)/(x[, i]), base)
+    }
+    if (is.data.frame(x))
+        x.ilr <- data.frame(x.ilr)
+    x.ilr <- data.frame(x.ilr)
+    if (all(nchar(colnames(x)) > 1)) {
+      for (i in 1:(D - 1)) {
+          colnames(x.ilr)[i] <- paste(colnames(x)[i], "_",
+          paste(substr(colnames(x)[(i + 1):D], 1, 2),
+          collapse = "-"), collapse = "", sep = "")
+       }
+    }
+    return(-x.ilr)
+}
+
+############################################################################################
+
     if (!is.matrix(x) && !is.data.frame(x)) 
         stop("x must be matrix or data.frame")
     if (ncol(x) < 3) 
